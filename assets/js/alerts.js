@@ -12,4 +12,3 @@ const seleccion = confirm('estas seguro de borrar??'); //el confirm devuelve tru
 
 console.log(seleccion);
 
-
