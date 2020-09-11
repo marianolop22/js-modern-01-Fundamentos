@@ -15,14 +15,14 @@ const c = 10; // nunca cambia
 // alert('hola desde app.js');
 
 
-let a = 10, 
+/* let a = 10, 
     b = 10, 
     c = 'Hola ', 
     d = 'Spiderman',
     x = a + b;
 
 const saludo = c + d;
-
+ */
 /* 
 console.log(x);
 console.error(x);
@@ -38,16 +38,44 @@ console.log({x});
 
 console.table({a, b, c, d, x});
  */
-c = 'Hola de nuevo';
+// c = 'Hola de nuevo';
 
 //var outerWidth = 1000000; //no es buena práctica hacer esto y usar el va
 //var outerHeight = 600; //toca las variables de window
 
 //no tocan las variables del objeto global window
-let outerWidth = 100;
-const outerHeight = 1000;
+// let outerWidth = 100;
+// const outerHeight = 1000;
+
+var App = ( function () {
 
 
+    var foo = 'foo';
+    
+    function internal() {
+        
+        var bar = 'bar';
+        console.log(foo);
+        
+    }
+    
+    function external() {
+        console.log(bar);
+        console.log(foo);
+        
+    }
+
+    return {
+        internal:internal,
+        external:external
+    }
+
+
+
+})();
+
+App.internal();
+App.external();
 
 
 
